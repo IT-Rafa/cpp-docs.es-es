@@ -17,15 +17,15 @@ ms.locfileid: "50656877"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 
-Visual C++ incluye un compilador de C que puede usar para crear desde programas de consola básicas hasta aplicaciones completas de escritorio de Windows, aplicaciones móviles y mucho más.
+Visual C++ incluye un compilador de C que puede usar para crear desde básicos programas de consola hasta aplicaciones completas de escritorio de Windows, aplicaciones móviles y mucho más.
 
-En este tutorial se muestra cómo crear un básico "Hola, mundo": el programa de C de estilo mediante el uso de un texto editor y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar en C++ en la línea de comandos, consulte [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si desea probar el IDE de Visual Studio en lugar de usar la línea de comandos, consulte [Tutorial: trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+En este tutorial se muestra cómo crear un básico programa "Hola, mundo" en lenguaje C mediante el uso de un texto editor y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar en C++ en la línea de comandos, consulte [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si desea probar el IDE de Visual Studio en lugar de usar la línea de comandos, consulte [Tutorial: trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para completar este tutorial, deben haber instalado Visual Studio y los componentes opcionales de Visual C++ o las herramientas de compilación para Visual Studio.
 
-Visual Studio es un entorno de desarrollo integrado que admite un editor completo, los administradores de recursos, depuradores y los compiladores para numerosos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
+Visual Studio es un entorno de desarrollo integrado que incluye un completo editor, gestores de recursos, depuradores y compiladores para numerosos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
 Build Tools para Visual Studio, versión de Visual Studio instala solo el conjunto de herramientas de línea de comandos, compiladores, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para laboratorios de compilación o aula ejercita e instala de forma relativamente rápida. Para instalar solo el conjunto de herramientas de línea de comandos, descargue [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) y ejecute el instalador.
 
@@ -57,10 +57,10 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
    > [!NOTE]
    > Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104 al ejecutar el **cl** de comandos, o bien no está usando un símbolo del sistema, o algo va mal con la instalación de Visual C++. Debe corregir este problema antes de continuar.
 
-   Si no se encuentra el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017, intente volver a instalar el **desarrollo de escritorio con C++** carga de trabajo en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). O bien, vuelva a instalar el [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
+   Si no se encuentra el atajo a símbolo del sistema para desarrolladores, o si recibe un mensaje de error al escribir `cl`, entonces la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017, intente volver a instalar la opción de  **desarrollo de escritorio con C++** en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). O bien, vuelva a instalar el [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba haga doble clic para abrir el menú contextual para el acceso de directo del símbolo del sistema para desarrolladores y, a continuación, elija **ejecutar como administrador** a compilar y ejecutar el programa que se crea siguiendo este tutorial correctamente.
+   > Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba hacer doble clic para abrir el menú contextual para el acceso de directo del símbolo del sistema para desarrolladores y, a continuación, elija **ejecutar como administrador** para poder compilar y ejecutar el programa correctamente siguiendo este tutorial .
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Crear un archivo de código fuente de C y compilarlo en la línea de comandos
 
@@ -82,7 +82,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
 
 1. En la barra de menús del Bloc de notas, elija **archivo** > **guardar** guardar simple.c en el directorio de trabajo.
 
-1. Cambie a la ventana de símbolo del sistema para desarrolladores. Escriba `dir` en el símbolo del sistema para mostrar el contenido del directorio de c:\simple. Debería ver el simple.c del archivo de origen en la lista de directorios, que se parece algo como:
+1. Cambie a la ventana de símbolo del sistema para desarrolladores. Escriba `dir` en el símbolo del sistema para mostrar el contenido del directorio de c:\simple. Debería ver el el archivo de código fuente simple.c en la lista de directorios, que tendrá un aspecto similar este:
 
     ```Output
     C:\simple>dir
@@ -99,7 +99,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
 
     ```
 
-   Las fechas y otros detalles variarán en su equipo. Si no ve el archivo de código fuente, asegúrese de que ha cambiado en el directorio de c:\simple que creó simple.c y en el Bloc de notas, asegúrese de que guardó el archivo de código fuente en este directorio. Además, asegúrese de que ha guardado el código fuente con una extensión de nombre de archivo .c, no una extensión. txt.
+   Las fechas y otros detalles variarán en su equipo. Si no ve el archivo de código fuente, confirme que ha cambiado al directorio c:\simple que creó y, en el Bloc de notas, asegúrese de que guardó el archivo de código fuente en este directorio. Además, asegúrese de que ha guardado el código fuente con una extensión de nombre de archivo .c, no una extensión. txt.
 
 1. Para compilar el programa, escriba `cl simple.c` en el símbolo del sistema de desarrollador.
 
@@ -119,7 +119,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
     ```
 
    > [!NOTE]
-   > Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104, el símbolo del sistema para desarrolladores no está configurado correctamente. Para obtener información sobre cómo solucionar este problema, vuelva a la **abra un símbolo del sistema para desarrolladores** sección.
+   > Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104, el símbolo del sistema para desarrolladores no estará configurado correctamente. Para obtener información sobre cómo solucionar este problema, vuelva a la **abra un símbolo del sistema para desarrolladores** sección.
 
    > [!NOTE]
    > Si se produce una advertencia o error del vinculador o compilador diferentes, revise el código fuente para corregir los errores, a continuación, guárdelo y vuelva a ejecutar el compilador. Para obtener información sobre los errores específicos, use el cuadro de búsqueda en la parte superior de esta página para buscar el número de error.
